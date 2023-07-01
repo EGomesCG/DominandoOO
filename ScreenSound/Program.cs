@@ -1,16 +1,15 @@
 ﻿//Quando uma classe tem muitas linhas, significa que ela tem mais de uma responsabilidade
 using ScreenSound.Menus;
 using ScreenSound.Modelos;
-using OpenAI_API;
 
 //Aqui é a classe principal do sistema - O programa começa por aqui
 internal class Program
 {
     //O sistema é iniciado pelo método principal Main()
     //Que começa recebendo uma lista de string
-    private static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        var cliente = new OpenAIAPI();
+
 
         Banda ira = new("Ira!");
         ira.AdicionarNota(new Avaliacao(10));
@@ -57,7 +56,7 @@ internal class Program
             Console.WriteLine("Digite 3 para mostrar todas as bandas");
             Console.WriteLine("Digite 4 para avaliar uma banda");
             Console.WriteLine("Digite 5 para avaliar uma álbum");
-            Console.WriteLine("Digite 6 para exibir os detalhes de uma banda");
+            //Console.WriteLine("Digite 6 para exibir os detalhes de uma banda");
             Console.WriteLine("Digite -1 para sair");
 
             Console.Write("\nDigite a sua opção: ");

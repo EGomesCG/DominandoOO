@@ -23,6 +23,7 @@ internal class Banda : IAvaliar
             else return notas.Average(c => c.Nota);
         }
     }
+    public string Resumo { get; set; }
     public IEnumerable<Album> Albuns => albuns;
     //Método que faz parte da propriedade
     public void AdicionarAlbum(Album album) 
